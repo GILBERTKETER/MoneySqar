@@ -1,0 +1,135 @@
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+
+.withdrawal_body {
+  width: 100%;
+  height: 100vh;
+  padding: var(--card-padding);
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../ASSETS/bit1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdrawal_body .withdrawal-threshold {
+  width: 500px;
+  height: 500px;
+  padding: var(--card-padding);
+  background-color: var(--color-home);
+  box-shadow: var(--box-shadow-2);
+  border-radius: 5px;
+}
+
+.withdrawal-threshold .top {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  border: 1px solid var(--color-secondary);
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.withdrawal-threshold .top h2 {
+  font-size: 20px;
+}
+.withdrawal-threshold .top h3 {
+  text-align: center;
+}
+
+.withdraw {
+  display: grid;
+  grid-template-columns: repeat(1, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: var(--card-padding);
+}
+.withdraw form input {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-gray-light);
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow-2);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-light);
+}
+
+.withdraw button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1520px) {
+  .withdrawal_body {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background-image: none;
+    background-color: var(--color-home);
+  }
+
+  .withdraw {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 30px;
+
+    padding: var(--card-padding);
+  }
+  .withdraw input {
+    height: auto;
+    width: 100%;
+    border: 1px solid var(--color-gray-light);
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow-2);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--color-light);
+    padding: 10px 30px;
+  }
+}

@@ -1,0 +1,122 @@
+/*root variables*/
+
+:root {
+    --color-white: #ffffff;
+    --color-light: #f0eff5;
+    --color-gray-light: #86848c;
+    --color-gray-dark: #56555e;
+    --color-dark: #27282f;
+  
+    --color-home: rgb(5, 20, 27);
+    --color-secondary: rgb(21, 189, 186);
+    --light-color: rgb(1, 5, 12);
+    --color-home-1: rgb(9, 33, 31);
+    --color-orange: rgb(211, 98, 45);
+    --color-secondary-2: rgb(16, 72, 100);
+    --color-secondary-1: rgb(35, 27, 179);
+  
+    --card-padding: 1.6rem;
+    --padding-1: 16px;
+    --padding-2: 8px;
+  
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 10px;
+  
+    --box-shadow: 0.4rem 0.4rem 0 #717597;
+    --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+  }
+
+
+  .youtube_body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-home);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .youtube_video{
+    height: 600px;
+    width: 50%;
+    box-shadow: var(--box-shadow-2);
+    padding: var(--card-padding);
+    background-color: var(--light-color);
+    position: absolute;
+
+  }
+
+  .youtube_video h2{
+    position: relative;
+    margin: 10px auto;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: auto;
+    text-align: center;
+    height: auto;
+    border: 1px solid var(--color-secondary);
+  }
+
+  .video{
+    height: 80%;
+    width: 100%;
+    box-shadow: var(--box-shadow-2);
+    background-color: var(--color-home);
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+
+  .video_flex{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+  }
+
+  .video_flex h3{
+    background-color: rgb(47, 90, 47);
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+    border-radius: 6px;
+    font-size: auto;
+  }
+
+  #none{
+    background-color: rgb(103, 24, 24);
+  }
+
+  @media screen and (max-width:820px) {
+    
+  .youtube_video{
+    height: 50%;
+    width: 90%;
+    margin-top: 10%;
+
+  }
+  .video{
+    height: 70%;
+  }
+    .youtube_body{
+      align-items: start;
+    }
+
+    .video_flex h3{
+      height: 30px;
+      font-size: 10px;
+    }
+  }

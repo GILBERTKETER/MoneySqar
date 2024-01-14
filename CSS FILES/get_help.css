@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px 3px rgba(224, 199, 199, 0.15);
+
+  --green: #16a085;
+  --black: #444;
+  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 0.2rem solid var(--green);
+}
+nav{
+  background-color: var(--light-color);
+}
+.help-section {
+  background-color: var(--color-home);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.help-page {
+  width: 30%;
+  height: auto;
+  background-color: var(--light-color);
+}
+.help {
+  min-height: 500px;
+  width: auto;
+  box-shadow: var(--box-shadow-2);
+}
+.help h3 {
+  text-align: left;
+  text-transform: capitalize;
+  padding: 20px 0px;
+  font-size: auto;
+  padding-left: 2%;
+}
+.help p {
+  box-shadow: var(--box-shadow-2);
+  background-color: var(--color-home);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+.flex-area{
+  display: grid;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-area input {
+  height: 50px;
+  margin: 10px;
+  background-color: var(--color-home);
+  text-align: center;
+  color: var(--color-light);
+  border-radius: 5px;
+  border: 1px solid var(--color-gray-light);
+}
+
+.flex-area a{
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+  padding: 5px 10px;
+  font-weight: bolder;
+  color: var(--light-color);
+  text-transform: capitalize;
+  background-color: var(--color-secondary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .help-page {
+    width: 90%;
+  }
+
+  
+.flex-area{
+  display: grid;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-area input {
+  height: 50px;
+  margin: 10px;
+  background-color: var(--color-home);
+  text-align: center;
+  color: var(--color-light);
+  border-radius: 5px;
+  border: 1px solid var(--color-gray-light);
+}
+
+.flex-area button{
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+  padding: 5px 10px;
+  font-weight: 600;
+  color: var(--light-color);
+  text-transform: capitalize;
+}
+}
+@media screen and (max-width:1520px) {
+  .help-section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  
+}

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
+/*root variables*/
+
+:root {
+    --color-white: #ffffff;
+    --color-light: #f0eff5;
+    --color-gray-light: #86848c;
+    --color-gray-dark: #56555e;
+    --color-dark: #27282f;
+  
+    --color-home: rgb(5, 20, 27);
+    --color-secondary: rgb(21, 189, 186);
+    --light-color: rgb(1, 5, 12);
+    --color-home-1: rgb(9, 33, 31);
+    --color-orange: rgb(211, 98, 45);
+    --color-secondary-2: rgb(16, 72, 100);
+    --color-secondary-1: rgb(35, 27, 179);
+  
+    --card-padding: 1.6rem;
+    --padding-1: 16px;
+    --padding-2: 8px;
+  
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 10px;
+  
+    --box-shadow: 0.4rem 0.4rem 0 #717597;
+    --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-home);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: auto;
+  background-color: var(--light-color);
+  padding: 10px 30px 40px;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.drop_box {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.container p{
+    color: var(--color-secondary);
+    font-size: 13px;
+}
+.btn {
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  font-weight: 600;
+  width: 150px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: var(--color-home-1);
+  color: var(--color-orange);
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: var(--color-home);
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+
+@media screen and (max-width:1520px) { 
+  .container{
+    display: flex;
+    align-items: start;
+  }
+
+  .card{
+    margin-top: 20px;
+  }
+  
+}

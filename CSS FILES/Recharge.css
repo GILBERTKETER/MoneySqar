@@ -1,0 +1,203 @@
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body-33 {
+
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../ASSETS/bit1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: auto;
+  overflow: hidden;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h2 {
+  color: var(--color-secondary);
+  font-weight: bolder;
+}
+.top img {
+  width: 100px;
+  height: 100px;
+}
+.top h1 {
+  color: var(--color-orange);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form h2{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.form:hover{
+  box-shadow: 0.2rem 0.2rem 0 #717597;
+}
+.form{
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+  padding: var(--card-padding);
+  background-color: var(--color-home);
+  box-shadow: var(--box-shadow-2);
+  border: 0.1px solid var(--color-light);
+
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  position: absolute;
+  left: 55%;
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: var(--color-home);
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+  color: var(--color-orange);
+  text-transform: capitalize;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:none;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  background-color: var(--color-home-1);
+  color: var(--color-white);
+  border: 1px solid;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: var(--color-secondary);
+  color: var(--light-color);
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: var(--color-secondary-2);
+  color: var(--color-orange);
+}
+
+@media screen and (max-width:1520px) {
+  .body-33 {
+    overflow: auto;
+    max-height: 250vh;
+  }
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: var(--color-home);
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+  
+}

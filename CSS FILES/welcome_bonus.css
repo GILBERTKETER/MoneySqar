@@ -1,0 +1,155 @@
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+
+.welcome_page {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-home);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.karibu_bonus {
+  width: 600px;
+  height: 500px;
+  padding: var(--card-padding);
+  box-shadow: var(--box-shadow-2);
+  margin-bottom: 0;
+  border-radius: 6px;
+  background-color: var(--light-color);
+}
+
+.karibu_bonus h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: auto;
+  border-bottom: 2px solid var(--color-dark);
+  margin-bottom: 10px;
+}
+
+.downlines-required, .downlines-activated{
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 6px;
+    font-size: auto;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: auto;
+    text-align: center;
+    border: 1px solid var(--color-secondary-2);
+    padding: var(--card-padding);
+}
+
+.redeem-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.redeem-button button{
+    width: auto;
+    border-radius: 6px;
+    color: var(--light-color);
+    height: auto;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.redeem-button button:hover{
+    color: var(--color-orange);
+}
+
+.karibu_bonus table{
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+        padding: var(--card-padding);
+}
+.karibu_bonus table tbody tr td{
+    margin-bottom: 10px;
+    font-size: auto;
+    height: 40px;
+    text-align: center;
+    color: var(--color-secondary);
+    background-color: var(--color-home);
+    border-radius: 6px;
+}
+.karibu_bonus table thead tr th{
+    border-radius: 6px;
+    background-color: var(--color-home);
+    height: auto;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    color: var(--color-orange);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: auto;
+}
+
+#active{
+    color: green;
+}
+
+@media screen and (max-width:1520px) {
+
+  #search,
+  .info,
+  .upgrade {
+    display: none;
+  }
+
+  
+  .notices{
+    position: absolute;
+    gap: 20px;
+    right: 10%;
+
+  }
+  .welcome_page{
+    
+    width: auto;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .karibu_bonus{
+    width: 80%;
+    margin: 0;
+    height: auto;
+  }
+}

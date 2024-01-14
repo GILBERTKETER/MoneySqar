@@ -1,0 +1,127 @@
+@import url(../CSS\ FILES/style.css);
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.history_body {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../ASSETS/bit1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+.form_container {
+  width: 800px;
+  height: auto;
+  background-color: var(--color-home);
+  padding: var(--card-padding);
+  border: 1px solid var(--color-secondary);
+  position: absolute;
+  margin-top: 15%;
+  right: 10%;
+  box-shadow: var(--box-shadow-2);
+  border-radius: var(--card-border-radius);
+}
+
+.form h2 {
+  text-align: center;
+  font-size: auto;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+form table{
+  height: auto;
+  width: 100%;
+  border-collapse: collapse;
+  padding: var(--card-padding);
+  border: 1px solid var(--color-orange);
+}
+
+.form table thead tr,
+.form table tbody tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+  gap: 0px;
+
+}
+.form table thead tr td,
+.form table tbody tr td{
+  border: 1px solid var(--color-orange);
+  border-collapse: collapse;
+
+  width: 100%;
+  text-align: center;
+  color: var(--color-secondary);
+  padding: 10px;
+
+}
+
+.form table tbody tr td{
+  color: var(--color-light);
+}
+@media screen and (max-width:1520px) {
+  
+.form_container {
+  width: 96%;
+  height: auto;
+  background-color: var(--color-home);
+  padding: var(--card-padding);
+  border: 1px solid var(--color-secondary);
+  position: absolute;
+  margin-top: 15%;
+  left: 5px;
+  right: 0;
+  box-shadow: var(--box-shadow-2);
+  border-radius: 5px;
+}
+
+.form table thead tr th,
+.form table tbody tr td{
+  font-size: auto;
+} 
+
+.history_body{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  background-color: var(--color-home);
+  background-image: none;
+}
+}

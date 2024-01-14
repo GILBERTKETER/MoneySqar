@@ -1,0 +1,96 @@
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+
+.dormant_downlines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-home);
+}
+
+.dormant-list {
+  margin-top: 100px;
+
+    /*background-color: var(--light-color);*/
+    background-color: white;
+  max-height: 150vh;
+  width: 800px;
+  box-shadow: var(--box-shadow-2);
+  padding: var(--card-padding);
+  align-items: center;
+}
+
+.dormant-list h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.dormant-list table{
+    background-color: var(--color-home);
+    border: 1px solid var(--color-gray-light);
+    max-height: 130vh;
+    box-shadow: var(--box-shadow-2);
+    width: 100%;
+    padding: var(--card-padding);
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.dormant-list table tr th{
+    border: 1px solid var(--color-gray-light);
+    height: 40px;
+    color: var(--color-secondary);
+    text-transform: capitalize;
+    background-color: var(--light-color);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.dormant-list table tr td{
+    border: 1px solid var(--color-gray-light);
+    height: 40px;
+    background-color: var(--light-color);
+    color: var(--color-gray-light);
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--color-orange);
+}
+
+@media screen and (max-width:1520px) {
+  .dormant_downlines{
+    align-items: start;
+  }
+  .dormant-list{
+    margin-top: 20px;
+  }
+}

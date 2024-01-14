@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+/*root variables*/
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-dark: #27282f;
+
+  --color-home: rgb(5, 20, 27);
+  --color-secondary: rgb(21, 189, 186);
+  --light-color: rgb(1, 5, 12);
+  --color-home-1: rgb(9, 33, 31);
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgb(16, 72, 100);
+  --color-secondary-1: rgb(35, 27, 179);
+
+  --card-padding: 1.6rem;
+  --padding-1: 16px;
+  --padding-2: 8px;
+
+  --card-border-radius: 1.6rem;
+  --border-radius-1: 1rem;
+  --border-radius-2: 10px;
+
+  --box-shadow: 0.4rem 0.4rem 0 #717597;
+  --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+}
+
+.dark-theme {
+  --light-color: rgba(241, 212, 241, 0.933);
+  --color-secondary: #1d5497;
+  --color-home: #fefe;
+  --color-light: #112d4e;
+  --color-white: rgb(101, 52, 52);
+  --color-home-1: rgba(220, 187, 220, 0.933);
+
+  --color-gray-light: black;
+  --color-gray-dark: #f4d7f7;
+
+  --color-orange: rgb(211, 98, 45);
+  --color-secondary-2: rgba(139, 165, 158, 0.933);
+  --color-secondary-1: rgb(13, 39, 78);
+}
+body {
+  background-color: var(--color-home);
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+* {
+  transition: all 1s linear;
+}
+/*
+nav {
+  box-shadow: var(--box-shadow-2);
+  position: sticky;
+  top: 0px;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+  z-index: 5000;
+  background-color: var(--light-color);
+}
+nav .top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+nav .top .logo {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+/*
+nav .top .logo #logo {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  border: 1px solid var(--color-primary-1);
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 2px 20px;
+  background: var(--color-secondary-1);
+  color: var(--color-white);
+}
+nav .top .logo #logo #m,
+nav .top .logo #logo #s {
+  color: gold;
+}
+
+nav .logo img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 0;
+  cursor: pointer;
+}
+
+nav .top .logo .bar i:hover {
+  font-weight: 600;
+}
+nav .top .profile-area .profile-photo img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .search-bar {
+  background: var(--color-gray-dark);
+  padding: var(--padding-2) var(--card-padding);
+  width: auto;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-secondary);
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+nav .search-bar input[type="search"] {
+  color: var(--color-light);
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+}
+nav .search-bar input[type="search"]::placeholder {
+  color: var(--color-home);
+}
+nav .info .content1 {
+  background-color: var(--color-home);
+  border-radius: 6px;
+  padding: 10px;
+  width: auto;
+  font-size: 50%;
+  text-transform: uppercase;
+  border: 1px solid var(--color-orange);
+}
+
+nav .top .mode {
+  display: flex;
+  background: var(--color-secondary);
+  width: 7rem;
+  height: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--color-secondary);
+}
+nav .top .mode #mode1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 10px 0px 0px 10px;
+}
+nav .top .mode #mode2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 0px 10px 10px 0px;
+}
+nav .top .mode .activemode {
+  background-color: var(--color-home-1);
+  color: var(--color-light);
+}
+nav .top .upgrade-btn {
+  align-items: center;
+  text-align: center;
+  top: 25%;
+}
+
+nav .top .upgrade-btn button {
+  width: 150px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--color-secondary);
+  text-align: center;
+  border: 1px solid;
+}
+nav .top .upgrade-btn button:hover {
+  background: var(--color-secondary-2);
+  font-weight: bolder;
+}
+nav .top .upgrade-btn span {
+  font-size: 15px;
+  position: relative;
+  top: 4px;
+}
+nav .top .mode .active {
+  background: var(--color-secondary-1);
+  border-radius: var(--border-radius-2);
+  color: var(--color-white);
+}
+
+nav .profile-area .profile-pic img {
+  cursor: pointer;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--color-orange);
+}
+
+.notices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 50px;
+}
+.notices .notification i,
+.notices .messages i {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+#not,
+#mes {
+  color: rgb(203, 26, 26);
+  padding: 3px;
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.notification i:hover,
+.messages i:hover {
+  font-weight: 500px;
+}
+
+.user {
+  border: 1px solid var(--color-orange);
+  width: 320px;
+  position: absolute;
+  top: 115%;
+  right: 0;
+  background: var(--light-color);
+  border-radius: 6px;
+  transition: max-height 0.5s linear;
+  height: 400px;
+  padding: 10px;
+  display: none;
+  z-index: 10001;
+}
+
+.users {
+  border: 1px solid var(--color-orange);
+  width: 320px;
+  position: absolute;
+  top: 115%;
+  left: 0;
+  background: var(--light-color);
+  border-radius: 6px;
+  transition: max-height 0.5s linear;
+  height: 400px;
+  padding: 10px;
+  display: none;
+  z-index: 10001;
+}
+
+.show {
+  display: block;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.user-info .user-pic img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.user hr {
+  background-color: red;
+  color: red;
+  width: 100%;
+  height: 1px;
+}
+.user .user-content {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  height: 100%;
+  position: relative;
+}
+.user .user-content .user-content-1 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+  gap: 20px;
+  margin: 10px 0px;
+  transition: 1s linear;
+  position: relative;
+  overflow: hidden;
+}
+.user .user-content .user-content-1 .information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.user .user-content .user-content-1 .information h4 {
+  width: 150px;
+  color: var(--color-light);
+}
+
+.user .user-content .user-content-1 span {
+  color: var(--color-white);
+}
+
+.user .user-content .user-content-1:hover {
+  background-color: var(--color-home);
+}
+.menu-btn {
+  margin: 10px;
+  height: 30px;
+  width: 88%;
+
+  position: absolute;
+  left: 0px;
+  transform: translateY(30px);
+  z-index: 1002;
+  transition: 5s ease-in-out;
+
+  display: none;
+}
+.menu-btn span {
+  color: var(--color-secondary);
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  transition: 1s ease-in-out;
+  top: 5px;
+}
+
+button #updatebtn {
+  position: absolute;
+  right: 20px;
+  color: var(--color-secondary);
+  cursor: pointer;
+  top: 93px;
+  z-index: 10003;
+  display: none;
+}
+/*=====
+
+.userss {
+  border: 1px solid var(--color-orange);
+  width: 150px;
+  position: absolute;
+  top: 115%;
+  left: 0;
+  background: var(--light-color);
+  border-radius: 6px;
+  transition: max-height 0.5s linear;
+  height: 400px;
+  padding: 10px;
+  display: none;
+  z-index: 10001;
+}
+
+.users-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.users-info .users-pic img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.userss .users-contentss {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  height: 100%;
+  position: relative;
+}
+
+.userss .users-contentss .users-contents-1 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+  gap: 20px;
+  margin: 10px 0px;
+  transition: 1s linear;
+  position: relative;
+  overflow: hidden;
+}
+
+.userss .users-contentss .users-contents-1 .informations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.userss .users-contentss .users-contents-1 .informations h4 {
+  width: 100px;
+  color: var(--color-light);
+}
+
+.userss .users-contentss .users-contents-1 span {
+  color: var(--color-white);
+}
+
+.userss .users-contentss .users-contents-1:hover {
+  background-color: var(--color-dark);
+}*/
+/*==========================*/
+* {
+  box-sizing: border-box;
+}
+.body_trivia {
+  background-color: var(--color-home);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(236, 225, 225, 0.1);
+  width: 600px;
+  overflow: hidden;
+}
+.quiz-header {
+  padding: 4rem;
+}
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label {
+  cursor: pointer;
+}
+.body_trivia button,
+.body_trivia input[type="submit"] {
+  background-color: var(--color-secondary);
+  color: var(--light-color);
+  border: none;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+.body_trivia button:hover,
+.body_trivia  input[type="submit"]:hover {
+  background-color: var(--color-home);
+  color: var(--color-secondary);
+  box-shadow: var(--box-shadow-2);
+}
+.body_trivia button:focus,
+.body_trivia input[type="submit"]:focus {
+  outline: none;
+  background-color: var(--color-secondary-2);
+}
+#question {
+  color: var(--color-light);
+}
+#a_text,
+#b_text,
+#c_text,
+#d_text {
+  color: var(--color-orange);
+}
+#results {
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 1000px) {
+  .body_trivia {
+    display: flex;
+    align-items: start;
+    margin-top: 10px;
+  }
+  .quiz-container {
+    width: 99%;
+    box-shadow: var(--box-shadow-2);
+  }
+}

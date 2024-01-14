@@ -1,0 +1,126 @@
+/*root variables*/
+
+:root {
+    --color-white: #ffffff;
+    --color-light: #f0eff5;
+    --color-gray-light: #86848c;
+    --color-gray-dark: #56555e;
+    --color-dark: #27282f;
+  
+    --color-home: rgb(5, 20, 27);
+    --color-secondary: rgb(21, 189, 186);
+    --light-color: rgb(1, 5, 12);
+    --color-home-1: rgb(9, 33, 31);
+    --color-orange: rgb(211, 98, 45);
+    --color-secondary-2: rgb(16, 72, 100);
+    --color-secondary-1: rgb(35, 27, 179);
+  
+    --card-padding: 1.6rem;
+    --padding-1: 16px;
+    --padding-2: 8px;
+  
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 10px;
+  
+    --box-shadow: 0.4rem 0.4rem 0 #717597;
+    --box-shadow-2: 6px 6px 10px -1px rgba(224, 199, 199, 0.15);
+  }
+
+  .refferals-body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-home);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .refferals-container{
+    height: 370px;
+    width: 800px;
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow-2);
+    border-radius: 6px;
+    background-color: var(--light-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+.refferals-container .refferals-card{
+    background-color: var(--color-home);
+    height: 150px;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow-2);
+    position: relative;
+    margin-right: 10px;
+}
+
+.refferals-card h3{
+    font-weight: 600;
+    font-size: auto;
+    text-transform: capitalize;
+}
+
+.refferals-card h2{
+    font-weight: 700;
+    font-size: auto;
+    position: absolute;
+    margin-left: 5%;
+    bottom: 50px;
+}
+
+.refferals-card small{
+    position: absolute;
+    color: var(--color-secondary);
+    right: 30px;
+    bottom: 20px;
+    font-size: auto;
+    cursor: pointer;
+}
+@media screen and (max-width:900px) {
+
+    .refferals{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: start;
+
+    
+    }
+    .refferals-container{
+        display: grid;
+        justify-content: center;
+        align-items: start;
+        margin: auto;
+        width: 90%;
+        gap: 20px;
+        height: auto;
+        margin-top: 90px;
+    }
+    
+.refferals-container .refferals-card{
+    background-color: var(--color-home);
+    height: auto;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow-2);
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    font-size: auto;
+}
+    
+.refferals-card h2{
+    font-weight: 700;
+    font-size: auto;
+    position: relative;
+    margin-left: 5%;
+    bottom: 0px;
+}
+}
